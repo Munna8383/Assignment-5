@@ -70,7 +70,9 @@
                 <h1 class="text-xl lg:text-6xl text-white font-bold"> End-to-End Travel with </h1>
             <h2 class="text-xl lg:text-6xl text-[#1DD100] font-bold">Pahartoli Paribahan</h2>
             <p class="w-2/3 mx-auto text-white text-xl font-semibold">Welcome to our bus services website, your one-stop destination for all things related to convenient and efficient transportation!</p>
-            <button onclick="travelToAnotherSection()" class="bg-[#1DD100] text-sm lg:text-xl font-semibold py-3 px-5 rounded-xl">Buy Tickets</button>
+          <a href="#travel">  <button  class="bg-[#1DD100] text-sm lg:text-xl font-semibold py-3 px-5 rounded-xl">Buy Tickets</button></a>
+
+
             </div>
 
 
@@ -329,12 +331,17 @@
                     <div id="tickets">
 
                     </div>
+
+                    
                    
                     <div class="divider"></div>
 
                     <div class="flex justify-between">
                         <h1 class="font-bold">Total Price</h1>
-                        <h1 class="font-bold">BDT: <span id="total-price">0</span></h1>
+                        <h1 class="font-bold">BDT: <span id="total-price"></span></h1>
+                    </div>
+                    <div id="discount">
+
                     </div>
                     <div id="hide-apply">
                         <input id="apply-field" type="text" placeholder="Have Any Coupon" class="input input-bordered w-full max-w-xs" />

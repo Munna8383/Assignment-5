@@ -7,11 +7,19 @@
 
 
 
-
-
-
  for(let seat of seats){
     seat.addEventListener("click",function(){
+     
+
+         //    restricted to buy more than 4 ticket
+  
+    if(clickCount>3){
+      alert("Limit Over");
+      return;          
+  }
+  else{
+   clickCount++
+  }
 
         seat.style.backgroundColor = "green"
         seat.setAttribute('disabled', '');
@@ -70,28 +78,14 @@
     grandTotal.innerText =totalPriceCount;
 
 
-     clickCount++
-
-     //    restricted to buy more than 4 ticket
-
-    if(clickCount>4){
-        alert("Limit Over");
-        
-    }
-
     // active the activeButton
-
     const applyButton = document.getElementById("apply-button")
-
-    if(clickCount>0){
-   
-       applyButton.removeAttribute("disabled")
-   
+    if(clickCount>=4){      
+      applyButton.removeAttribute("disabled")
     }
+  
         
     })
-
-   
 
 
  }
@@ -117,6 +111,26 @@
 
         grandTotal.innerText = parseInt(fifteenDiscount);
 
+        const div1 = document.createElement("h1")
+
+        const div2 = document.createElement("h1")
+
+
+        div2.innerText = "Discount"
+
+        div1.innerText = parseInt(discount);
+
+        const finalDiscount = document.getElementById("discount")
+
+        finalDiscount.setAttribute("class","flex");
+       finalDiscount.classList.add("justify-between");
+       finalDiscount.classList.add("font-bold");
+
+        finalDiscount.appendChild(div2)
+        finalDiscount.appendChild(div1)
+
+
+
         const hideApply = document.getElementById("hide-apply");
 
        hideApply.setAttribute("class","hidden")
@@ -134,11 +148,31 @@
 
         grandTotal.innerText =parseInt(twentyDiscountDiscount);
 
+        
+        const div1 = document.createElement("h1")
+
+        const div2 = document.createElement("h1")
+
+
+        div2.innerText = "Discount"
+
+        div1.innerText = parseInt(discount);
+
+        const finalDiscount = document.getElementById("discount")
+
+        finalDiscount.setAttribute("class","flex");
+       finalDiscount.classList.add("justify-between");
+       finalDiscount.classList.add("font-bold");
+
+        finalDiscount.appendChild(div2)
+        finalDiscount.appendChild(div1)
+
         const hideApply = document.getElementById("hide-apply");
 
-       hideApply.setAttribute("class","hidden")
+       hideApply.setAttribute("class","hidden");
 
-        
+       
+
 
 
     }
@@ -146,21 +180,9 @@
         alert("enter Valid Coupon")
     }
 
-     
-
-
-    
-
-
  })
 
 
 
 
 
-// traveling another section
-
-function travelToAnotherSection(){
-    const travel = document.getElementById("travel")
-    travel.scrollIntoView({ behavior: 'smooth' });
-}
