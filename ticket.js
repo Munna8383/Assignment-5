@@ -138,7 +138,7 @@
 
         
     }
-    else if(applyFieldValue==="COUPLE 20"){
+    else if(applyFieldValue==="Couple 20"){
 
         let discount = totalPriceCount*20/100;
 
@@ -177,7 +177,7 @@
 
     }
     else{
-        alert("enter Valid Coupon")
+        alert("Enter Valid Coupon")
     }
 
  })
