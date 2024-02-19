@@ -21,8 +21,20 @@
    clickCount++
   }
 
+//   Enable next button if the seat button clicked
+  if(clickCount>0){
+   const nextButton =   document.getElementById("next");
+
+   nextButton.removeAttribute("disabled")
+}
+
+
+// after selecting each button change color and make it disable
         seat.style.backgroundColor = "green"
         seat.setAttribute('disabled', '');
+
+
+
     //    increase the number of Seat
        let seatsAdd= document.getElementById("seat-count");
 
@@ -30,6 +42,8 @@
        seatCount = seatCount+1;
 
        seatsAdd.innerText = seatCount;
+
+
     //    decrease the number of seat
        let seatsLeft= document.getElementById("seat-left");
 
@@ -37,6 +51,8 @@
        seatLeft = seatLeft-1;
 
        seatsLeft.innerText = seatLeft;
+
+
     //    taking all seat reserve by customers
        let ticketsNumber = document.getElementById("tickets");
        const div = document.createElement("div")
@@ -135,7 +151,6 @@
 
        hideApply.setAttribute("class","hidden")
          
-
         
     }
     else if(applyFieldValue==="Couple 20"){
@@ -171,9 +186,6 @@
 
        hideApply.setAttribute("class","hidden");
 
-       
-
-
 
     }
     else{
@@ -181,6 +193,11 @@
     }
 
  })
+
+
+
+
+
 
 
 
