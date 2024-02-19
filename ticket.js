@@ -76,6 +76,8 @@
        div.appendChild(h3);
        ticketsNumber.appendChild(div);
 
+
+
     
 
 
@@ -194,6 +196,14 @@
 
  })
 
+ 
+// refreshing the window
+
+ const continueButton = document.getElementById("continue")
+
+ continueButton.addEventListener("click",function(){
+   window.location.reload()
+ })
 
 
 
